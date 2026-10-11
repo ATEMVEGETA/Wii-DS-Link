@@ -4,6 +4,14 @@ Unofficial paired Windows builds of [melonDS](https://github.com/ATEMVEGETA/melo
 and [Dolphin](https://github.com/ATEMVEGETA/dolphin) for local Wii–Nintendo DS
 communication on one PC.
 
+## Download
+
+**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.1.0-beta.1/Wii-DS-Link-Windows-x64-v0.1.0-beta.1.zip)**
+
+This single ZIP contains the matching melonDS and Dolphin builds. Individual
+emulator ZIPs and SHA-256 checksums are available on the
+[v0.1.0-beta.1 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.1.0-beta.1).
+
 > [!IMPORTANT]
 > This project has been tested so far with **My Pokémon Ranch** and
 > **Pokémon Battle Revolution**. Other Wii–DS titles and every game/save
