@@ -4,6 +4,9 @@ Unofficial paired Windows builds of [melonDS](https://github.com/ATEMVEGETA/melo
 and [Dolphin](https://github.com/ATEMVEGETA/dolphin) for local Wii–Nintendo DS
 communication on one PC.
 
+## Development Note
+This project was developed with the assistance of OpenAI Codex (AI), which helped with coding, debugging, and implementing new features. I provided the ideas, requirements, and direction for the project, along with testing and feedback throughout development.
+
 ## Download
 
 **[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.1.0-beta.1/Wii-DS-Link-Windows-x64-v0.1.0-beta.1.zip)**
