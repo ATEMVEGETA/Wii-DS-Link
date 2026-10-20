@@ -1,6 +1,7 @@
 # How to link melonDS and Dolphin
 
-These steps apply to the matching Wii–DS Link builds from the same release.
+These steps apply to Wii–DS Link v0.2.0-beta.2: the updated melonDS paired
+with the unchanged Dolphin from v0.2.0-beta.1.
 
 ## 1. Extract both emulators
 
@@ -21,7 +22,8 @@ each emulator normally with your own legally obtained material.
 
 In melonDS:
 
-1. Open **Config → Wi-Fi settings**.
+1. If a game is running, use **System → Stop** first, then open
+   **Config → Wi-Fi settings**.
 2. Enable **Connect to Dolphin**.
 3. Apply the setting.
 
@@ -33,6 +35,13 @@ In Dolphin, while no game is running:
 
 Both settings are saved. You do not need to repeat them for every session.
 For multiplayer, enable **Connect to Dolphin** in every melonDS instance.
+The option is per instance, not a global switch: changing it in the first
+window does not change other existing windows. In v0.2.0-beta.2, every window
+can open Wi-Fi settings and edit its own Wii link option, including windows
+whose saved setting is disabled. You do not need to delete or edit the TOML.
+Shared LAN settings remain read-only in additional instances; they are
+separate from the editable **Connect to Dolphin** option. A command-line
+override, if used, still takes precedence over the saved link setting.
 
 ## 3. Start the games
 
@@ -60,6 +69,8 @@ Battle Revolution's **DS Battle Mode** supports up to four DS players.
 1. Keep one Dolphin instance open. In melonDS, use **System → Launch new
    instance**, or open another process of the matching melonDS executable.
 2. Enable **Connect to Dolphin** in each instance before loading its game.
+   If already running, stop that instance's game first, change the option,
+   and restart the game. There is no need to close the other instances.
    Give each player a separate writable game/save copy. Extra instances may
    use `.sav.2`, `.sav.3`, etc., falling back to the original save if a suffixed
    file is absent; do not let two instances write to the same save.
@@ -78,9 +89,16 @@ slots, but each game enforces its own player limit. This release has confirmed
 four-player Battle Revolution gameplay; eight-client automated transport
 checks do not establish eight-player retail compatibility.
 
+## Upgrading from v0.2.0-beta.1
+
+With all melonDS instances closed, replace `melonDS.exe` with the
+v0.2.0-beta.2 executable. Keep your existing TOML configuration and saves.
+Dolphin is unchanged and does not need replacing. Previously disabled Wii
+link settings in extra instances can now be enabled through Wi-Fi settings.
+
 ## Upgrading from v0.1.0-beta.1
 
-Extract v0.2.0-beta.1 to a new folder and use both new emulators together.
+Extract v0.2.0-beta.2 to a new folder and use both supplied emulators together.
 Keep the older installation and your save backups until the new pair is
 configured. Do not merge an old Dolphin `User` directory into the new package
 as part of installing the binaries; transfer your own saves/settings
@@ -99,7 +117,8 @@ while a game is actively saving.
 
 ## If it does not connect
 
-1. Confirm both executables came from the same Wii–DS Link release.
+1. Use v0.2.0-beta.2 melonDS with the supplied Dolphin, which is unchanged
+   from v0.2.0-beta.1.
 2. Confirm both connection options are enabled.
 3. Use only one Dolphin instance. For multiplayer, use the new matching
    melonDS build for every participant and stay within the game's player limit.

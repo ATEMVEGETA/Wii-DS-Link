@@ -9,10 +9,10 @@ Wii–DS Link is an aggregate release of two separately licensed emulator forks.
 - Bundled third-party libraries and data retain their own licenses. Their
   notices are included beside the corresponding binary in the release package.
 
-Matching modified source for v0.2.0-beta.1 is published in:
+Matching modified source for the v0.2.0-beta.2 package is published in:
 
-- [melonDS source tag](https://github.com/ATEMVEGETA/melonDS/tree/wii-ds-link-v0.2.0-beta.1)
-- [Dolphin source tag](https://github.com/ATEMVEGETA/dolphin/tree/wii-ds-link-v0.2.0-beta.1)
+- [melonDS source tag](https://github.com/ATEMVEGETA/melonDS/tree/wii-ds-link-v0.2.0-beta.2)
+- [Dolphin source tag, unchanged from v0.2.0-beta.1](https://github.com/ATEMVEGETA/dolphin/tree/wii-ds-link-v0.2.0-beta.1)
 
 The release pages also provide source archives corresponding to the binaries.
 GitHub's automatically generated source archives do not expand Git submodules;

@@ -1,35 +1,41 @@
-# Build information — v0.2.0-beta.1
+# Build information — v0.2.0-beta.2
 
-This release packages the exact emulator executables from the successful
-local multi-DS test. Documentation and archive names were updated for
-publication without recompiling those executables.
+This release updates the compact melonDS executable to fix Wi-Fi settings
+access in additional instances. The Dolphin executable and runtime files are
+unchanged from v0.2.0-beta.1. No Playnite custom build is included or modified.
 
 | Executable | SHA-256 |
 | --- | --- |
 | `Dolphin.exe` | `68b93fbf0512f51442136e633da2837a33626b77b2e9e9d8f69daac17cdc998c` |
-| `melonDS.exe` | `dba30678b5ce7f72428be924d857e2d8dea69bd49b3a37b5f31f8c4b4dc3031d` |
+| `melonDS.exe` | `a9bf19529ef0fec7778e40af9131c2fbb59334d11698dcd5b8d4cfbaf7a0f931` |
 
 These are executable hashes, not ZIP hashes. Use the release asset
 `SHA256SUMS.txt` for the downloadable archives.
 
-The melonDS window retains its **Multi-DS Test** label to preserve the tested
-binary. The public release is still labeled beta.
+The melonDS window identifies this candidate as **WiFi Settings Fix**. The
+public release remains beta. The functional hotfix source commit is
+`ced7bb74087235f451b113f7cbb23975408bd1c2`; the publication tag also includes
+the updated release documentation. The unchanged Dolphin source revision is
+`22060863a04f086bd0c51a6fdf7500e27470d35d`.
 
 The sources remain based on official melonDS 1.1 and Dolphin 2609a. This is
-not a rebase to newer upstream versions. The public source revisions are
-tagged `wii-ds-link-v0.2.0-beta.1` in both emulator repositories:
+not a rebase to newer upstream versions:
 
-- [melonDS source](https://github.com/ATEMVEGETA/melonDS/tree/wii-ds-link-v0.2.0-beta.1)
-- [Dolphin source](https://github.com/ATEMVEGETA/dolphin/tree/wii-ds-link-v0.2.0-beta.1)
+- [melonDS source, `wii-ds-link-v0.2.0-beta.2`](https://github.com/ATEMVEGETA/melonDS/tree/wii-ds-link-v0.2.0-beta.2)
+- [Dolphin source, unchanged `wii-ds-link-v0.2.0-beta.1`](https://github.com/ATEMVEGETA/dolphin/tree/wii-ds-link-v0.2.0-beta.1)
 
 The corresponding source archives are named
-`melonDS-WiiDS-Link-source-v0.2.0-beta.1.zip` and
-`Dolphin-WiiDS-Link-source-v0.2.0-beta.1.zip`. Submodule revisions remain
-pinned; restore them recursively when building from a Git checkout. Preserve
-the upstream and dependency notices included with each binary.
+`melonDS-WiiDS-Link-source-v0.2.0-beta.2.zip` and
+`Dolphin-WiiDS-Link-source-v0.2.0-beta.1.zip`. They contain the tracked source
+and build documentation; Git submodule contents are not expanded. Submodule
+revisions remain pinned; restore them recursively when building from a Git
+checkout. Preserve the upstream and dependency notices included with each
+binary.
 
-The local tester confirmed four-player Battle Revolution gameplay,
-participant disconnect/rejoin, and one-DS Ranch transfer/save/shutdown
-checks. Automated checks passed for eight DS clients. The bridge has 15
-client slots, subject to each game's limit; no eight-player retail result is
-claimed. See [COMPATIBILITY.md](COMPATIBILITY.md).
+The settings hotfix passed an actual Qt dialog fixture with 11 checks, 10
+standalone frontend modes, and 13 multi-DS backend cases covering eight
+contexts. Fresh retail confirmation for this new melonDS executable is still
+pending. The prior v0.2.0-beta.1 tester confirmed four-player Battle Revolution
+gameplay, participant disconnect/rejoin, and one-DS Ranch
+transfer/save/shutdown checks. No eight-player retail result is claimed.
+See [COMPATIBILITY.md](COMPATIBILITY.md).

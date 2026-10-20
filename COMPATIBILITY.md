@@ -9,11 +9,14 @@
 | Pokémon Battle Revolution | Compatible DS Pokémon game with correctly paired save | Connected; Download Play and Pokémon data copy exercised | A previously paired Battle Revolution save can reject a different DS game/save identity |
 | Pokémon Battle Revolution, DS Battle Mode | Four compatible DS Pokémon games/saves | Four DS players connected and gameplay worked; participant disconnect/rejoin confirmed | Four is this game's player limit |
 
-The public package is **v0.2.0-beta.1**. It contains the same emulator
-executables used for the successful multi-DS test. The tester also confirmed
-the one-DS Ranch transfer/save/shutdown regression checks. These are user
-reports, alongside the automated checks below; they do not establish
-compatibility with every region, revision, or save.
+The current public package is **v0.2.0-beta.2**. The retail results in the
+table were confirmed with v0.2.0-beta.1, including the successful multi-DS
+test and one-DS Ranch transfer/save/shutdown regression checks. The new
+melonDS executable fixes settings access in additional instances; Dolphin
+is unchanged. Automated hotfix checks passed, but fresh retail gameplay
+confirmation for the updated melonDS executable is still pending. These
+user reports and automated checks do not establish compatibility with every
+region, revision, or save.
 
 ## Capacity and automated validation
 
@@ -23,6 +26,12 @@ checks passed with eight DS clients, including separate processes, and
 covered one-DS regressions, lifecycle, radio identity, and disconnect handling.
 Eight-player retail gameplay has not been tested. The 15-client capacity is
 an implementation limit, not a claim that a particular game supports 15 players.
+
+The v0.2.0-beta.2 settings hotfix passed an actual Qt dialog fixture with 11
+checks, 10 standalone frontend modes, and 13 multi-DS backend cases covering
+eight contexts. These verify settings availability, per-instance persistence,
+network-reset behavior, startup, and transport regressions; they are not
+new retail gameplay tests.
 
 ## Not certified yet
 

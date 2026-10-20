@@ -6,11 +6,11 @@ communication on one PC.
 
 ## Download
 
-**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.1/Wii-DS-Link-Windows-x64-v0.2.0-beta.1.zip)**
+**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.2/Wii-DS-Link-Windows-x64-v0.2.0-beta.2.zip)**
 
 This single ZIP contains the matching melonDS and Dolphin builds. Individual
 emulator ZIPs and SHA-256 checksums are available on the
-[v0.2.0-beta.1 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.1).
+[v0.2.0-beta.2 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.2).
 
 > [!IMPORTANT]
 > This project has been tested so far with **My Pokémon Ranch** and
@@ -18,13 +18,20 @@ emulator ZIPs and SHA-256 checksums are available on the
 > Revolution's DS Battle Mode. Other Wii–DS titles and every game/save
 > combination are not yet verified.
 
-The current release is **v0.2.0-beta.1**. Download the combined Windows package
+The current release is **v0.2.0-beta.2**. It fixes Wi-Fi settings access in
+additional melonDS instances; Dolphin is unchanged from v0.2.0-beta.1.
+The retail results above were confirmed on v0.2.0-beta.1; this settings hotfix
+has automated validation but no fresh retail gameplay confirmation yet.
+Download the combined Windows package
 from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 [HOW-TO-LINK.md](HOW-TO-LINK.md).
 
 ## What this adds
 
 - **Connect to Dolphin** in melonDS under **Config → Wi-Fi settings**.
+  Wi-Fi settings is available in every instance, so an existing disabled link
+  can be enabled without deleting or manually editing the TOML configuration.
+  Stop a running game before changing the option.
 - **Connect to melonDS** in Dolphin under
   **Configuration → Wii → Misc Settings**.
 - Automatic discovery over IPv4 loopback once both options are enabled.
@@ -38,8 +45,9 @@ from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 
 This is a local, single-PC link for one Dolphin and one or more melonDS
 instances. It is not internet play, physical Wi-Fi, or a bridge to real consoles.
-Use both emulators from this release when upgrading; do not mix the older
-single-client build into a multiplayer session.
+Use the paired builds from this release when upgrading. Its Dolphin is
+identical to v0.2.0-beta.1, so an existing v0.2.0-beta.1 Dolphin does not need
+replacement. Do not mix the older v0.1 single-client build into multiplayer.
 
 ## Repositories
 
