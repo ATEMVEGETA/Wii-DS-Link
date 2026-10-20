@@ -78,3 +78,6 @@ data, and save files are not included. Use your own legally obtained material.
 
 The emulator forks retain their upstream licenses. Dependency notices are
 included in the release package. See [LICENSES.md](LICENSES.md).
+
+## Development Note
+This project was developed with the assistance of OpenAI Codex (AI), which helped with coding, debugging, and implementing new features. I provided the ideas, requirements, and direction for the project, along with testing and feedback throughout development.
