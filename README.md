@@ -6,18 +6,19 @@ communication on one PC.
 
 ## Download
 
-**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.1.0-beta.1/Wii-DS-Link-Windows-x64-v0.1.0-beta.1.zip)**
+**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.1/Wii-DS-Link-Windows-x64-v0.2.0-beta.1.zip)**
 
 This single ZIP contains the matching melonDS and Dolphin builds. Individual
 emulator ZIPs and SHA-256 checksums are available on the
-[v0.1.0-beta.1 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.1.0-beta.1).
+[v0.2.0-beta.1 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.1).
 
 > [!IMPORTANT]
 > This project has been tested so far with **My Pokémon Ranch** and
-> **Pokémon Battle Revolution**. Other Wii–DS titles and every game/save
-> combination are not yet certified.
+> **Pokémon Battle Revolution**, including four DS players in Battle
+> Revolution's DS Battle Mode. Other Wii–DS titles and every game/save
+> combination are not yet verified.
 
-The current release is **v0.1.0-beta.1**. Download the combined Windows package
+The current release is **v0.2.0-beta.1**. Download the combined Windows package
 from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 [HOW-TO-LINK.md](HOW-TO-LINK.md).
 
@@ -27,14 +28,18 @@ from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 - **Connect to melonDS** in Dolphin under
   **Configuration → Wii → Misc Settings**.
 - Automatic discovery over IPv4 loopback once both options are enabled.
+- Multiple melonDS instances can join the same Dolphin session. The bridge
+  has 15 client slots; the Wii game determines how many players it accepts.
 - Either emulator may be opened first; the games initiate the link from their
   own connection screens.
 - The Wii game's real Download Play client is transferred and runs from DS RAM.
   The DS cartridge/save remains attached for game data and save updates.
 - No external relay program or console window is needed.
 
-This is a local, single-PC experimental link for one Dolphin and one melonDS
-instance. It is not internet play, physical Wi-Fi, or a bridge to real consoles.
+This is a local, single-PC link for one Dolphin and one or more melonDS
+instances. It is not internet play, physical Wi-Fi, or a bridge to real consoles.
+Use both emulators from this release when upgrading; do not mix the older
+single-client build into a multiplayer session.
 
 ## Repositories
 
@@ -53,8 +58,13 @@ The short version:
   exercised with compatible Pokémon Diamond/Pearl saves in the working test
   implementation.
 - **Pokémon Battle Revolution:** DS discovery, Download Play, and Pokémon data
-  copying were exercised with a correctly paired DS save. Battle Revolution's
-  own save/cartridge identity rule can reject a technically working link.
+  copying were exercised with a correctly paired DS save. Four-player DS
+  battles and a participant disconnect/rejoin were also confirmed by the
+  tester. Battle Revolution's own save/cartridge identity rule can reject a
+  technically working link.
+- **Automated transport checks:** eight DS clients passed. This checks the
+  transport, not eight-player retail gameplay; no eight-player game has been
+  verified with this release.
 
 The exact public package is deliberately labeled beta while it receives wider
 testing. A successful result for these games is not a promise that every title
