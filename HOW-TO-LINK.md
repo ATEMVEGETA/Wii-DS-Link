@@ -85,9 +85,10 @@ Battle Revolution's **DS Battle Mode** supports up to four DS players.
    own controls to finish the battle and disconnect normally.
 
 Opening order does not assign player numbers. The bridge has 15 client
-slots, but each game enforces its own player limit. This release has confirmed
-four-player Battle Revolution gameplay; eight-client automated transport
-checks do not establish eight-player retail compatibility.
+slots, but each game enforces its own player limit. Four-player Battle
+Revolution gameplay was confirmed on v0.2.0-beta.1; fresh retail confirmation
+of this settings hotfix is pending. Eight-client automated transport checks
+do not establish eight-player retail compatibility.
 
 ## Upgrading from v0.2.0-beta.1
 
