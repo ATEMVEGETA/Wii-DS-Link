@@ -21,8 +21,6 @@ emulator ZIPs and SHA-256 checksums are available on the
 The current release is **v0.2.0-beta.3**. It fixes Battle Revolution Mystery
 Gift receipt without requiring a manual MAC-address workaround. **Update both
 emulators.** Receipt and a repeated attempt were confirmed on this exact pair.
-The game may show its own signal-located notice on first detection; the tester
-did not see it on the next attempt. This notice has not been patched out.
 Ranch and four-player Battle Revolution results are from v0.2.0-beta.1; those
 complete flows were not freshly retested for this identity update.
 Download the combined Windows package

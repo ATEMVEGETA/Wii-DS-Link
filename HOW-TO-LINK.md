@@ -59,9 +59,7 @@ Use the normal in-game flow for the selected pair:
   Battle Mode.
 - **Battle Revolution Mystery Gift:** start the desired distribution on the
   Wii game. In the compatible DS game choose **Mystery Gift → Receive Gift →
-  Get via Wireless**, then follow the prompts. The game may first show its
-  signal-located notice; press A to continue. The tester saw it on first
-  detection but not the next attempt. This native notice is not a link error.
+  Get via Wireless**, then follow the prompts.
 
 Keep both games on their connection flows until Download Play and the
 application link complete. Once connected, follow the games' own prompts and

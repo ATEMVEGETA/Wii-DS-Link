@@ -10,9 +10,7 @@ identity. Old incompatible clients are not silently accepted. The existing
 multi-DS and per-instance Wi-Fi settings features remain.
 
 The tester confirmed gift receipt with Pearl and a non-default address, and
-a repeated attempt succeeded. The game's signal-located notice appeared on
-the first attempt, not the second; it has not been suppressed. Exact notice
-persistence/trigger rules have not been established for every game.
+a repeated attempt succeeded.
 
 Eight-client automated transport, lifecycle, identity and runtime checks pass.
 Ranch transfer/save/withdraw and four-player Battle Revolution results remain
