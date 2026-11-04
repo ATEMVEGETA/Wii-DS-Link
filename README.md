@@ -1,8 +1,9 @@
 # Wii–DS Link
 
-Unofficial paired Windows builds of [melonDS](https://github.com/ATEMVEGETA/melonDS)
+Unofficial paired builds of [melonDS](https://github.com/ATEMVEGETA/melonDS)
 and [Dolphin](https://github.com/ATEMVEGETA/dolphin) for local Wii–Nintendo DS
-communication on one PC.
+communication on one computer. Windows is the recommended, gameplay-tested
+download; macOS builds are available separately for experimental testing.
 
 ## Download
 
@@ -18,14 +19,37 @@ emulator ZIPs and SHA-256 checksums are available on the
 > Revolution's DS Battle Mode. Other Wii–DS titles and every game/save
 > combination are not yet verified.
 
-The current release is **v0.2.0-beta.3**. It fixes Battle Revolution Mystery
-Gift receipt without requiring a manual MAC-address workaround. **Update both
+The current recommended Windows release is **v0.2.0-beta.3**. It fixes Battle
+Revolution Mystery Gift receipt without requiring a manual MAC-address
+workaround. **Update both
 emulators.** Receipt and a repeated attempt were confirmed on this exact pair.
 Ranch and four-player Battle Revolution results are from v0.2.0-beta.1; those
 complete flows were not freshly retested for this identity update.
 Download the combined Windows package
 from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 [HOW-TO-LINK.md](HOW-TO-LINK.md).
+
+### Experimental macOS prerelease
+
+**macOS gameplay is not yet verified.** The separate
+[v0.2.0-beta.3-macos.1 prerelease](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.3-macos.1)
+contains matching native builds for testing:
+
+- [Apple Silicon (arm64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-arm64-experimental.zip)
+- [Intel (x86_64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-x86_64-experimental.zip)
+
+**Both downloads require macOS 15 or newer.** The apps are ad-hoc signed,
+not Apple Developer-ID signed or notarized. Evidence is limited to native
+builds, package audits, no-ROM startup and loopback checks, plus 13 transport,
+6 multiclient and 8 identity automated tests. These do not establish retail
+gameplay, save-transfer safety, or full-speed performance on a Mac. The
+gameplay results elsewhere in this README are Windows results.
+
+Read [MACOS-TESTING.md](MACOS-TESTING.md) before opening the apps. Use only
+your own game/BIOS material and backed-up copies of saves. Intel melonDS is
+interpreter-only in this source base; Dolphin uses Metal/OpenGL with Vulkan,
+built-in FFmpeg frame dumping and auto-update disabled. These experimental
+packages do not replace the recommended Windows release.
 
 ## What this adds
 
@@ -49,8 +73,8 @@ instances. It is not internet play, physical Wi-Fi, or a bridge to real consoles
 Use both paired builds from this release when upgrading. An older melonDS
 cannot represent arbitrary parent identities, so do not mix versions for this
 fix. Do not edit or delete your existing configuration or saves as a workaround.
-No fixed macOS binaries are published yet; previous experimental Mac packages
-are pre-fix builds and are not substitutes for this update.
+The macOS prerelease includes this identity fix, but still requires real-Mac
+gameplay testing; see [MACOS-TESTING.md](MACOS-TESTING.md).
 
 ## Repositories
 
