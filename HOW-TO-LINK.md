@@ -1,7 +1,7 @@
 # How to link melonDS and Dolphin
 
-These steps apply to Wii–DS Link v0.2.0-beta.2: the updated melonDS paired
-with the unchanged Dolphin from v0.2.0-beta.1.
+These steps apply to Wii–DS Link v0.2.0-beta.3. Update BOTH emulators for
+the Mystery Gift/parent-identity fix. No manual MAC-address change is needed.
 
 ## 1. Extract both emulators
 
@@ -57,6 +57,11 @@ Use the normal in-game flow for the selected pair:
   in Battle Revolution and choose **Connect to Wii** in the compatible DS game.
 - **Pokémon Battle Revolution, multiplayer:** follow the steps below for DS
   Battle Mode.
+- **Battle Revolution Mystery Gift:** start the desired distribution on the
+  Wii game. In the compatible DS game choose **Mystery Gift → Receive Gift →
+  Get via Wireless**, then follow the prompts. The game may first show its
+  signal-located notice; press A to continue. The tester saw it on first
+  detection but not the next attempt. This native notice is not a link error.
 
 Keep both games on their connection flows until Download Play and the
 application link complete. Once connected, follow the games' own prompts and
@@ -86,20 +91,19 @@ Battle Revolution's **DS Battle Mode** supports up to four DS players.
 
 Opening order does not assign player numbers. The bridge has 15 client
 slots, but each game enforces its own player limit. Four-player Battle
-Revolution gameplay was confirmed on v0.2.0-beta.1; fresh retail confirmation
-of this settings hotfix is pending. Eight-client automated transport checks
+Revolution gameplay was confirmed on v0.2.0-beta.1; this update newly confirms
+Mystery Gift receipt, not a new multiplayer retail run. Eight-client transport checks
 do not establish eight-player retail compatibility.
 
-## Upgrading from v0.2.0-beta.1
+## Upgrading from an earlier release
 
-With all melonDS instances closed, replace `melonDS.exe` with the
-v0.2.0-beta.2 executable. Keep your existing TOML configuration and saves.
-Dolphin is unchanged and does not need replacing. Previously disabled Wii
-link settings in extra instances can now be enabled through Wi-Fi settings.
+Close all emulators and back up your saves/settings. Update both melonDS and
+Dolphin to v0.2.0-beta.3, including Dolphin's supplied runtime files. Do not
+delete the TOML or rewrite WirelessMac as a workaround. Re-enable the link
+options if using a fresh profile. Previously disabled extra instances can
+still open Wi-Fi settings and enable their own link preference.
 
-## Upgrading from v0.1.0-beta.1
-
-Extract v0.2.0-beta.2 to a new folder and use both supplied emulators together.
+Extract the new pair to a new folder and use both supplied emulators together.
 Keep the older installation and your save backups until the new pair is
 configured. Do not merge an old Dolphin `User` directory into the new package
 as part of installing the binaries; transfer your own saves/settings
@@ -118,8 +122,8 @@ while a game is actively saving.
 
 ## If it does not connect
 
-1. Use v0.2.0-beta.2 melonDS with the supplied Dolphin, which is unchanged
-   from v0.2.0-beta.1.
+1. Use v0.2.0-beta.3 for BOTH emulators; do not combine a new Dolphin with an
+   old melonDS for this fix.
 2. Confirm both connection options are enabled.
 3. Use only one Dolphin instance. For multiplayer, use the new matching
    melonDS build for every participant and stay within the game's player limit.

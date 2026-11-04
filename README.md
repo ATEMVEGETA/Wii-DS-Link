@@ -6,11 +6,11 @@ communication on one PC.
 
 ## Download
 
-**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.2/Wii-DS-Link-Windows-x64-v0.2.0-beta.2.zip)**
+**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3/Wii-DS-Link-Windows-x64-v0.2.0-beta.3.zip)**
 
 This single ZIP contains the matching melonDS and Dolphin builds. Individual
 emulator ZIPs and SHA-256 checksums are available on the
-[v0.2.0-beta.2 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.2).
+[v0.2.0-beta.3 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.3).
 
 > [!IMPORTANT]
 > This project has been tested so far with **My Pokémon Ranch** and
@@ -18,10 +18,13 @@ emulator ZIPs and SHA-256 checksums are available on the
 > Revolution's DS Battle Mode. Other Wii–DS titles and every game/save
 > combination are not yet verified.
 
-The current release is **v0.2.0-beta.2**. It fixes Wi-Fi settings access in
-additional melonDS instances; Dolphin is unchanged from v0.2.0-beta.1.
-The retail results above were confirmed on v0.2.0-beta.1; this settings hotfix
-has automated validation but no fresh retail gameplay confirmation yet.
+The current release is **v0.2.0-beta.3**. It fixes Battle Revolution Mystery
+Gift receipt without requiring a manual MAC-address workaround. **Update both
+emulators.** Receipt and a repeated attempt were confirmed on this exact pair.
+The game may show its own signal-located notice on first detection; the tester
+did not see it on the next attempt. This notice has not been patched out.
+Ranch and four-player Battle Revolution results are from v0.2.0-beta.1; those
+complete flows were not freshly retested for this identity update.
 Download the combined Windows package
 from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 [HOW-TO-LINK.md](HOW-TO-LINK.md).
@@ -45,9 +48,11 @@ from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 
 This is a local, single-PC link for one Dolphin and one or more melonDS
 instances. It is not internet play, physical Wi-Fi, or a bridge to real consoles.
-Use the paired builds from this release when upgrading. Its Dolphin is
-identical to v0.2.0-beta.1, so an existing v0.2.0-beta.1 Dolphin does not need
-replacement. Do not mix the older v0.1 single-client build into multiplayer.
+Use both paired builds from this release when upgrading. An older melonDS
+cannot represent arbitrary parent identities, so do not mix versions for this
+fix. Do not edit or delete your existing configuration or saves as a workaround.
+No fixed macOS binaries are published yet; previous experimental Mac packages
+are pre-fix builds and are not substitutes for this update.
 
 ## Repositories
 
@@ -70,6 +75,9 @@ The short version:
   battles and a participant disconnect/rejoin were also confirmed by the
   tester. Battle Revolution's own save/cartridge identity rule can reject a
   technically working link.
+- **Battle Revolution Mystery Gift:** receipt with Pokémon Pearl and a
+  non-default Dolphin MAC was confirmed on v0.2.0-beta.3, including a repeated
+  successful attempt. Other DS game/reward combinations remain unverified.
 - **Automated transport checks:** eight DS clients passed. This checks the
   transport, not eight-player retail gameplay; no eight-player game has been
   verified with this release.

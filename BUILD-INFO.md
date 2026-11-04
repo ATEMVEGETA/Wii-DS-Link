@@ -1,41 +1,41 @@
-# Build information — v0.2.0-beta.2
+# Build information - v0.2.0-beta.3
 
-This release updates the compact melonDS executable to fix Wi-Fi settings
-access in additional instances. The Dolphin executable and runtime files are
-unchanged from v0.2.0-beta.1. No Playnite custom build is included or modified.
+Both Windows x64 executables are updated for consistent Wii parent identity
+and Battle Revolution Mystery Gift receipt. No Playnite build is included.
+The exact tested EXEs are preserved, not rebuilt solely to change title text.
 
 | Executable | SHA-256 |
 | --- | --- |
-| `Dolphin.exe` | `68b93fbf0512f51442136e633da2837a33626b77b2e9e9d8f69daac17cdc998c` |
-| `melonDS.exe` | `a9bf19529ef0fec7778e40af9131c2fbb59334d11698dcd5b8d4cfbaf7a0f931` |
+| Dolphin.exe | 39d004a14c0a82bb472fdd3a0af01da1600b1b41a7d6efd005f96cf46d466fb8 |
+| melonDS.exe | 09f3bd5d275d5adf9a2e5d276df255c5a0eb597f0751a612f0d134305173d2a5 |
 
-These are executable hashes, not ZIP hashes. Use the release asset
-`SHA256SUMS.txt` for the downloadable archives.
+These are EXE hashes. Use SHA256SUMS.txt for ZIP hashes. RELEASE-BUILD.json
+records tagged source revisions and tested code-file identities.
 
-The melonDS window identifies this candidate as **WiFi Settings Fix**. The
-public release remains beta. The functional hotfix source commit is
-`ced7bb74087235f451b113f7cbb23975408bd1c2`; the publication tag also includes
-the updated release documentation. The unchanged Dolphin source revision is
-`22060863a04f086bd0c51a6fdf7500e27470d35d`.
+Sources remain based on melonDS 1.1 and Dolphin 2609a, not newer upstream:
 
-The sources remain based on official melonDS 1.1 and Dolphin 2609a. This is
-not a rebase to newer upstream versions:
+- [melonDS source tag](https://github.com/ATEMVEGETA/melonDS/tree/wii-ds-link-v0.2.0-beta.3)
+- [Dolphin source tag](https://github.com/ATEMVEGETA/dolphin/tree/wii-ds-link-v0.2.0-beta.3)
 
-- [melonDS source, `wii-ds-link-v0.2.0-beta.2`](https://github.com/ATEMVEGETA/melonDS/tree/wii-ds-link-v0.2.0-beta.2)
-- [Dolphin source, unchanged `wii-ds-link-v0.2.0-beta.1`](https://github.com/ATEMVEGETA/dolphin/tree/wii-ds-link-v0.2.0-beta.1)
+The compact melonDS uses UCRT64 GCC16.1.0, Qt6.8.3 and unchanged cached static
+dependencies from vcpkg baseline dd3097e305afa53f7b4312371f62058d2e665320.
+Dolphin uses MSVC19.51.36260, VS2026, WindowsSDK10.0.26100.0 and pinned Qt6.8.3.
+See each source repository's WII-DS-BUILD.md for build commands.
 
-The corresponding source archives are named
-`melonDS-WiiDS-Link-source-v0.2.0-beta.2.zip` and
-`Dolphin-WiiDS-Link-source-v0.2.0-beta.1.zip`. They contain the tracked source
-and build documentation; Git submodule contents are not expanded. Submodule
-revisions remain pinned; restore them recursively when building from a Git
-checkout. Preserve the upstream and dependency notices included with each
-binary.
+The EXEs were compiled from the preceding tagged bases plus the functional
+changes now in beta.3, before publication docs. Embedded older Git/test labels
+(including melonDS's Mystery Gift Test label) are retained intentionally.
+Build records and source-file hashes map the exact payload to the release.
+Rebuilds need not be bit-identical. Source ZIPs do not expand submodules;
+restore their recorded pinned revisions recursively. Notices are included.
 
-The settings hotfix passed an actual Qt dialog fixture with 11 checks, 10
-standalone frontend modes, and 13 multi-DS backend cases covering eight
-contexts. Fresh retail confirmation for this new melonDS executable is still
-pending. The prior v0.2.0-beta.1 tester confirmed four-player Battle Revolution
-gameplay, participant disconnect/rejoin, and one-DS Ranch
-transfer/save/shutdown checks. No eight-player retail result is claimed.
-See [COMPATIBILITY.md](COMPATIBILITY.md).
+Fresh retail coverage: Battle Revolution Mystery Gift received with Pearl,
+using the previously failing non-default MAC, and a repeat succeeded.
+Other retail flows are historical beta.1 coverage, not freshly rerun here.
+Automated checks: parent identity9, legacy lifecycle17, automatic lifecycle11,
+eight-client transport13, standalone frontend10, Dolphin identity17 plus
+multiplayer/helper suites, and private Dolphin startup/dependency audit.
+These do not certify every game/region/reward, 15-player retail gameplay or Mac.
+
+No macOS binary containing this fix is published yet. Pre-fix experimental
+Mac packages must not be described as this update.

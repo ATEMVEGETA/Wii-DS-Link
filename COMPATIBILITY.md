@@ -8,13 +8,12 @@
 | My Pokémon Ranch | Pokémon Pearl | Connected and transfer exercised | Same Wii–DS link path as the Diamond test |
 | Pokémon Battle Revolution | Compatible DS Pokémon game with correctly paired save | Connected; Download Play and Pokémon data copy exercised | A previously paired Battle Revolution save can reject a different DS game/save identity |
 | Pokémon Battle Revolution, DS Battle Mode | Four compatible DS Pokémon games/saves | Four DS players connected and gameplay worked; participant disconnect/rejoin confirmed | Four is this game's player limit |
+| Pokémon Battle Revolution, Mystery Gift | Pokémon Pearl | Gift received and repeated successfully on v0.2.0-beta.3 | Normal non-default Dolphin MAC; no manual workaround |
 
-The current public package is **v0.2.0-beta.2**. The retail results in the
-table were confirmed with v0.2.0-beta.1, including the successful multi-DS
-test and one-DS Ranch transfer/save/shutdown regression checks. The new
-melonDS executable fixes settings access in additional instances; Dolphin
-is unchanged. Automated hotfix checks passed, but fresh retail gameplay
-confirmation for the updated melonDS executable is still pending. These
+The current public package is **v0.2.0-beta.3**. Mystery Gift receipt was
+confirmed on this exact pair with a non-default parent MAC and repeated.
+The other retail rows are from v0.2.0-beta.1, including multi-DS and Ranch;
+those full flows were not freshly rerun for the identity fix. These
 user reports and automated checks do not establish compatibility with every
 region, revision, or save.
 
@@ -40,6 +39,8 @@ new retail gameplay tests.
 - Internet or LAN play between two computers.
 - Connections to a physical Wii or Nintendo DS.
 - Every region, revision, emulator timing setting, or save history.
+- Mystery Gift with every DS title/reward combination.
+- Native macOS gameplay for this fix; no fixed Mac binary is published yet.
 
 Wii–DS software shares lower-level Nintendo wireless mechanisms, but games can
 use different Download Play clients, timing, framing, application protocols,
