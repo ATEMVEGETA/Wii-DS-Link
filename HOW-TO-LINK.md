@@ -1,7 +1,8 @@
 # How to link melonDS and Dolphin
 
-These steps apply to Wii–DS Link v0.2.0-beta.3. Update BOTH emulators for
-the Mystery Gift/parent-identity fix. No manual MAC-address change is needed.
+These steps apply to Wii–DS Link v0.2.0-beta.4. Update BOTH emulators and
+Dolphin's supplied runtime files for the Driver Download Play fix. The earlier
+Mystery Gift/parent-identity fix remains; no manual MAC-address change is needed.
 
 ## 1. Extract both emulators
 
@@ -60,6 +61,9 @@ Use the normal in-game flow for the selected pair:
 - **Battle Revolution Mystery Gift:** start the desired distribution on the
   Wii game. In the compatible DS game choose **Mystery Gift → Receive Gift →
   Get via Wireless**, then follow the prompts.
+- **Driver: San Francisco:** start its DS connection flow in the Wii game,
+  then boot the DS firmware menu in melonDS and select the advertised title
+  under **DS Download Play**. Follow the games' prompts after downloading.
 
 Keep both games on their connection flows until Download Play and the
 application link complete. Once connected, follow the games' own prompts and
@@ -89,14 +93,14 @@ Battle Revolution's **DS Battle Mode** supports up to four DS players.
 
 Opening order does not assign player numbers. The bridge has 15 client
 slots, but each game enforces its own player limit. Four-player Battle
-Revolution gameplay was confirmed on v0.2.0-beta.1; this update newly confirms
-Mystery Gift receipt, not a new multiplayer retail run. Eight-client transport checks
+Revolution gameplay was confirmed on v0.2.0-beta.1; this update adds Driver PAL
+connectivity, not a new multiplayer retail run. Eight-client transport checks
 do not establish eight-player retail compatibility.
 
 ## Upgrading from an earlier release
 
 Close all emulators and back up your saves/settings. Update both melonDS and
-Dolphin to v0.2.0-beta.3, including Dolphin's supplied runtime files. Do not
+Dolphin to v0.2.0-beta.4, including Dolphin's supplied runtime files. Do not
 delete the TOML or rewrite WirelessMac as a workaround. Re-enable the link
 options if using a fresh profile. Previously disabled extra instances can
 still open Wi-Fi settings and enable their own link preference.
@@ -120,7 +124,7 @@ while a game is actively saving.
 
 ## If it does not connect
 
-1. Use v0.2.0-beta.3 for BOTH emulators; do not combine a new Dolphin with an
+1. Use v0.2.0-beta.4 for BOTH emulators; do not combine a new Dolphin with an
    old melonDS for this fix.
 2. Confirm both connection options are enabled.
 3. Use only one Dolphin instance. For multiplayer, use the new matching
@@ -137,8 +141,10 @@ Optional diagnostic logs are off by default. When enabled in each emulator:
 - melonDS writes `wii-ds-bridge.log` in its working directory.
 - Dolphin writes `User/Logs/wii-ds-bridge.log`.
 
-The dedicated bridge logs contain scalar transport events, not game payloads,
-Pokémon data, saves, or RAM dumps. When reporting a problem, include the game
+The dedicated bridge logs contain transport events, sampled frame headers and
+radio metadata, not application payloads, Pokémon data, saves, or RAM dumps.
+Logging is bounded; melonDS uses buffering to reduce disk stalls. Review logs
+for private paths before sharing. When reporting a problem, include the game
 regions, emulator release version, exact screen reached by each game, and the
 two diagnostic logs if available. Do not upload copyrighted games, BIOS,
 firmware, NAND data, or personal saves.

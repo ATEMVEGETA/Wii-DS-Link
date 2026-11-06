@@ -5,6 +5,10 @@ pair for testing Wii–DS Link on one Mac. It is experimental, not a stable or
 gameplay-verified macOS release. Windows remains the recommended,
 gameplay-tested download.
 
+These beta.3 Mac packages do **not** contain the newer beta.4 Driver Download
+Play fix available for Windows. A matching updated Mac tester build is still
+being prepared; do not treat Windows Driver results as Mac confirmation.
+
 ## Choose the native package
 
 Both packages require **macOS 15 or newer**:

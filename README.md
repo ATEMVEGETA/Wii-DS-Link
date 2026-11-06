@@ -7,24 +7,27 @@ download; macOS builds are available separately for experimental testing.
 
 ## Download
 
-**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3/Wii-DS-Link-Windows-x64-v0.2.0-beta.3.zip)**
+**[Download the combined Windows x64 package](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.4/Wii-DS-Link-Windows-x64-v0.2.0-beta.4.zip)**
 
 This single ZIP contains the matching melonDS and Dolphin builds. Individual
 emulator ZIPs and SHA-256 checksums are available on the
-[v0.2.0-beta.3 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.3).
+[v0.2.0-beta.4 release page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.4).
 
 > [!IMPORTANT]
 > This project has been tested so far with **My Pokémon Ranch** and
 > **Pokémon Battle Revolution**, including four DS players in Battle
-> Revolution's DS Battle Mode. Other Wii–DS titles and every game/save
-> combination are not yet verified.
+> Revolution's DS Battle Mode, and **Driver: San Francisco (PAL)** Download
+> Play connectivity. Other Wii–DS titles and every game/save combination
+> are not yet verified.
 
-The current recommended Windows release is **v0.2.0-beta.3**. It fixes Battle
-Revolution Mystery Gift receipt without requiring a manual MAC-address
-workaround. **Update both
-emulators.** Receipt and a repeated attempt were confirmed on this exact pair.
-Ranch and four-player Battle Revolution results are from v0.2.0-beta.1; those
-complete flows were not freshly retested for this identity update.
+The current recommended Windows release is **v0.2.0-beta.4**. It fixes a generic
+Nintendo beacon-length mismatch that prevented a downloaded DS application
+from reconnecting, confirmed with Driver: San Francisco (PAL). Dolphin also
+includes the upstream removal of that game's problematic frame-rate speed
+hack. **Update both emulators and Dolphin's supplied runtime files.** The
+Mystery Gift identity fix, per-instance settings and multi-DS support remain.
+Earlier Pokémon results are retained coverage, not fresh retail regression
+runs of every flow for beta.4.
 Download the combined Windows package
 from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 [HOW-TO-LINK.md](HOW-TO-LINK.md).
@@ -33,7 +36,8 @@ from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 
 **macOS gameplay is not yet verified.** The separate
 [v0.2.0-beta.3-macos.1 prerelease](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.3-macos.1)
-contains matching native builds for testing:
+contains matching native beta.3 builds for testing; it does not yet include
+the beta.4 Driver fix:
 
 - [Apple Silicon (arm64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-arm64-experimental.zip)
 - [Intel (x86_64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-x86_64-experimental.zip)
@@ -100,6 +104,9 @@ The short version:
 - **Battle Revolution Mystery Gift:** receipt with Pokémon Pearl and a
   non-default Dolphin MAC was confirmed on v0.2.0-beta.3, including a repeated
   successful attempt. Other DS game/reward combinations remain unverified.
+- **Driver: San Francisco (PAL):** the tester confirmed working Download Play
+  connectivity with the beta.4 fix. Other regions and every game mode have
+  not been certified.
 - **Automated transport checks:** eight DS clients passed. This checks the
   transport, not eight-player retail gameplay; no eight-player game has been
   verified with this release.
