@@ -106,6 +106,9 @@ options if using a fresh profile. Previously disabled extra instances can
 still open Wi-Fi settings and enable their own link preference.
 
 Extract the new pair to a new folder and use both supplied emulators together.
+Do not overlay or merge an older Dolphin `Sys` directory into this release:
+the obsolete Driver speed-hack GameINI files removed in beta.4 must not be
+carried forward. Keep the new package's complete runtime files together.
 Keep the older installation and your save backups until the new pair is
 configured. Do not merge an old Dolphin `User` directory into the new package
 as part of installing the binaries; transfer your own saves/settings

@@ -1,34 +1,35 @@
 # Experimental macOS testing
 
-The **v0.2.0-beta.3-macos.1** prerelease provides a matching melonDS/Dolphin
+The **v0.2.0-beta.4-macos.1** prerelease provides a matching melonDS/Dolphin
 pair for testing Wii–DS Link on one Mac. It is experimental, not a stable or
 gameplay-verified macOS release. Windows remains the recommended,
 gameplay-tested download.
 
-These beta.3 Mac packages do **not** contain the newer beta.4 Driver Download
-Play fix available for Windows. A matching updated Mac tester build is still
-being prepared; do not treat Windows Driver results as Mac confirmation.
+These Mac packages contain the beta.4 Driver Download Play fix. Its Windows
+retail result is not a Mac gameplay confirmation.
 
 ## Choose the native package
 
-Both packages require **macOS 15 or newer**:
+Both current architectures require macOS 15 or newer:
 
-- Apple Silicon: [Wii-DS-Link-macOS-arm64-experimental.zip](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-arm64-experimental.zip)
-- Intel: [Wii-DS-Link-macOS-x86_64-experimental.zip](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-x86_64-experimental.zip)
+- Apple Silicon: [Wii-DS-Link-macOS-arm64-experimental.zip](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.4-macos.1/Wii-DS-Link-macOS-arm64-experimental.zip)
+- Intel: [Wii-DS-Link-macOS-x86_64-experimental.zip](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.4-macos.1/Wii-DS-Link-macOS-x86_64-experimental.zip)
 
 Use the architecture matching your Mac's chip and update both emulators
 together. Download checksums and package records from the
-[prerelease page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.3-macos.1).
+[prerelease page](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.4-macos.1).
 Do not mix an older melonDS with this Dolphin for the parent-identity fix.
 
 ## What has and has not been tested
 
 Evidence is limited to native builds, package audits, no-ROM startup and
-loopback checks, plus automated suites of 13 transport, 6 multiclient and
-8 identity tests. Those checks do not prove a complete retail-game connection.
+loopback checks, plus automated suites of 13 transport, 6 multiclient,
+8 identity and 8 native-beacon test groups on both architectures. Those checks
+do not prove a complete retail-game connection.
 No native Mac retail gameplay, save transfer, or full-speed gameplay has been
 verified for these packages. The compatibility results in
-[COMPATIBILITY.md](COMPATIBILITY.md) are not Mac gameplay confirmations.
+[COMPATIBILITY.md](https://github.com/ATEMVEGETA/Wii-DS-Link/blob/main/COMPATIBILITY.md)
+are not Mac gameplay confirmations.
 
 Known build limitations:
 
@@ -50,6 +51,8 @@ this guide does not require changing them.
 2. Extract the entire ZIP to a new, normal writable folder. Do not run the
    apps inside the ZIP, from a read-only disk image, or in a protected system
    directory. Keep your existing emulator installation and backups intact.
+   Do not merge an older Dolphin `Sys` directory into this package; its
+   obsolete Driver speed-hack files must not be carried forward.
 3. Keep the supplied folder layout, including melonDS's adjacent `portable`
    folder and Dolphin's adjacent `portable.txt` marker. The test profiles
    remain alongside this package instead of replacing an existing install.
@@ -79,7 +82,8 @@ instances write to the same save path, and never interrupt an active save.
 
 No USB Wi-Fi adapter or external relay is needed. Use one Dolphin instance
 and matching melonDS builds for all DS participants. See
-[HOW-TO-LINK.md](HOW-TO-LINK.md) for the game-specific connection flows and
+[HOW-TO-LINK.md](https://github.com/ATEMVEGETA/Wii-DS-Link/blob/main/HOW-TO-LINK.md)
+for the game-specific connection flows and
 save-identity rules; its Windows executable paths and Windows firewall advice
 do not apply to these Mac packages.
 
@@ -100,6 +104,9 @@ Use backed-up copies of saves and note each result separately:
   (disable pause-on-focus-loss if needed), and stay within the game's
   four-player limit. Give each player a separate writable game/save copy.
   Test a clean participant disconnect/rejoin if the initial battle succeeds.
+- **Driver: San Francisco:** test DS Download Play discovery, the download,
+  transition into the DS client and continued communication after it launches.
+  Note the Wii region and both games' exact last screens if it fails.
 
 The transport has 15 client slots; that is not a retail-game player limit or
 proof of compatibility. Follow each game's own save/disconnect prompts and
@@ -129,9 +136,12 @@ The experimental pair was built from these source revisions:
 
 | Component | Revision |
 | --- | --- |
-| melonDS | `60a07cca86189ac8b9e0cd1cc6516f575ed60ca3` |
-| Dolphin | `b24e2427a0ab5aec6102f3b5014d581699b9b4a4` |
-| Build helpers | `08aed1efc4fb76607a58c99d1c20e6b93aeb751b` |
+| melonDS | `6631417d026daab29faee7c9b5407db1a3263f35` |
+| Dolphin | `36c502b448d3d7ffa83398021b02bde49cee5e01` |
+| Build helpers | `8bf0fc5d43f379d48e45a37f201dcf3fdfded074` |
+
+Native build runs: Apple Silicon `42230826816`, Intel `42230831618`.
+Later documentation-only commits do not change these application source pins.
 
 Keep the package's build information, licenses and checksums with the apps
 when reporting a result.

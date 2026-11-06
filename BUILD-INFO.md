@@ -47,5 +47,8 @@ functional candidate. Battle Revolution Mystery Gift receipt/repeat was
 confirmed on beta.3. Ranch transfer/save/withdraw and four-player Battle
 Revolution remain historical beta.1 coverage, not fresh complete beta.4 reruns.
 
-The separate beta.3-macos.1 prerelease contains earlier native tester builds,
-not this Driver fix. Actual Mac retail gameplay remains unverified.
+The separate beta.4-macos.1 prerelease contains matching native tester builds
+with this Driver fix. Both architectures passed native startup and automated
+checks: 13 transport, 6 multiclient, 8 identity and 8 beacon groups. Actual Mac
+retail gameplay remains unverified. See `MACOS-TESTING.md` and that release's
+`MACOS-BUILD-INFO.json` for its source pins and package limitations.

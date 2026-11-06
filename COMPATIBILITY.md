@@ -50,8 +50,8 @@ new retail gameplay tests.
 - Connections to a physical Wii or Nintendo DS.
 - Every region, revision, emulator timing setting, or save history.
 - Mystery Gift with every DS title/reward combination.
-- Native macOS gameplay. The separate beta.3-macos.1 tester builds are
-  published, but do not yet include the beta.4 Driver fix.
+- Native macOS gameplay. The separate beta.4-macos.1 tester builds include
+  the Driver fix and pass native automated checks, not retail-game tests.
 
 Wii–DS software shares lower-level Nintendo wireless mechanisms, but games can
 use different Download Play clients, timing, framing, application protocols,

@@ -35,17 +35,17 @@ from [Releases](https://github.com/ATEMVEGETA/Wii-DS-Link/releases), then follow
 ### Experimental macOS prerelease
 
 **macOS gameplay is not yet verified.** The separate
-[v0.2.0-beta.3-macos.1 prerelease](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.3-macos.1)
-contains matching native beta.3 builds for testing; it does not yet include
-the beta.4 Driver fix:
+[v0.2.0-beta.4-macos.1 prerelease](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/tag/v0.2.0-beta.4-macos.1)
+contains matching native builds with the beta.4 Driver fix for testing:
 
-- [Apple Silicon (arm64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-arm64-experimental.zip)
-- [Intel (x86_64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.3-macos.1/Wii-DS-Link-macOS-x86_64-experimental.zip)
+- [Apple Silicon (arm64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.4-macos.1/Wii-DS-Link-macOS-arm64-experimental.zip)
+- [Intel (x86_64)](https://github.com/ATEMVEGETA/Wii-DS-Link/releases/download/v0.2.0-beta.4-macos.1/Wii-DS-Link-macOS-x86_64-experimental.zip)
 
 **Both downloads require macOS 15 or newer.** The apps are ad-hoc signed,
 not Apple Developer-ID signed or notarized. Evidence is limited to native
 builds, package audits, no-ROM startup and loopback checks, plus 13 transport,
-6 multiclient and 8 identity automated tests. These do not establish retail
+6 multiclient, 8 identity and 8 native-beacon test groups on both architectures.
+These do not establish retail
 gameplay, save-transfer safety, or full-speed performance on a Mac. The
 gameplay results elsewhere in this README are Windows results.
 
